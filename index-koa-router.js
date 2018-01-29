@@ -31,5 +31,5 @@ router.use('/page',page.routes(),page.allowedMethods());
 app.use(router.routes()).use(router.allowedMethods())
 
 app.listen(3330, () => {
-  console.log('[demo] route-use-middleware is starting at port 3000')
+  console.log('[demo] route-use-middleware is starting at port 3330')
 })
