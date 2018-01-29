@@ -1,7 +1,6 @@
 {
   "name": "koa-scratch",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,5 +10,15 @@
   "dependencies": {
     "koa": "^2.4.1",
     "koa-router": "^7.3.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ouyangxuanyun/node-koa-scratch.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ouyangxuanyun/node-koa-scratch/issues"
+  },
+  "homepage": "https://github.com/ouyangxuanyun/node-koa-scratch#readme",
+  "description": ""
 }
