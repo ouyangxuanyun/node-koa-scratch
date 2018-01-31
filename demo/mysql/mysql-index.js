@@ -10,10 +10,10 @@ const eventLog = function (err, sqlFile, index) {
     } else {
         console.log(`[SUCCESS] sql脚本文件: ${sqlFile} 第${index + 1}条脚本 执行成功 O(∩_∩)O !`)
     }
-}
+};
 
 // 获取所有sql脚本内容
-let sqlContentMap = getSqlContentMap()
+let sqlContentMap = getSqlContentMap();
 console.log('^^^^^^^^^^ getSqlContentMap ^^^^^^^^^^ ', sqlContentMap)
 // 执行建表sql脚本
 const createAllTables = async () => {
@@ -35,8 +35,6 @@ const createAllTables = async () => {
         }
     }
     console.log('sql脚本执行结束！')
-    console.log('请按 ctrl + c 键退出！')
-
-}
+};
 
 createAllTables();
