@@ -1,11 +1,11 @@
-const Koa = require('koa')
-const app = new Koa()
+const Koa = require('koa');
+const app = new Koa();
 
 const server = async (ctx, next) => {
     let result = {
         success: true,
         data: null
-    }
+    };
 
     if (ctx.method === 'GET') {
         if (ctx.url === '/getString.json') {
@@ -15,7 +15,7 @@ const server = async (ctx, next) => {
         } else {
             result.success = false
         }
-        ctx.body = result
+        ctx.body = result;
         next && next()
     } else if (ctx.method === 'POST') {
         if (ctx.url === '/postData.json') {
@@ -23,13 +23,13 @@ const server = async (ctx, next) => {
         } else {
             result.success = false
         }
-        ctx.body = result
+        ctx.body = result;
         next && next()
     } else {
-        ctx.body = 'hello world'
+        ctx.body = 'hello world';
         next && next()
     }
-}
+};
 
 app.use(server)
 

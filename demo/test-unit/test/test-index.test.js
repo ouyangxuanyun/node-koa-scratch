@@ -1,9 +1,9 @@
-const supertest = require('supertest')
-const chai = require('chai')
-const app = require('./../test-index')
+const supertest = require('supertest');
+const chai = require('chai');
+const app = require('./../test-index');
 
-const expect = chai.expect
-const request = supertest(app.listen())
+const expect = chai.expect;
+const request = supertest(app.listen());
 
 describe('开始测试demo的GET请求', () => {
 
@@ -12,25 +12,25 @@ describe('开始测试demo的GET请求', () => {
             .get('/getString.json')
             .expect(200)
             .end((err, res) => {
-                expect(res.body).to.be.an('object')
-                expect(res.body.success).to.be.an('boolean')
-                expect(res.body.data).to.be.an('string')
+                expect(res.body).to.be.an('object');
+                expect(res.body.success).to.be.an('boolean');
+                expect(res.body.data).to.be.an('string');
                 done()
             })
-    })
+    });
 
     it('测试/getNumber.json请求', (done) => {
         request
             .get('/getNumber.json')
             .expect(200)
             .end((err, res) => {
-                expect(res.body).to.be.an('object')
-                expect(res.body.success).to.be.an('boolean')
-                expect(res.body.data).to.be.an('number')
+                expect(res.body).to.be.an('object');
+                expect(res.body.success).to.be.an('boolean');
+                expect(res.body.data).to.be.an('number');
                 done()
             })
     })
-})
+});
 
 
 describe('开始测试demo的POST请求', () => {
@@ -39,10 +39,10 @@ describe('开始测试demo的POST请求', () => {
             .post('/postData.json')
             .expect(200)
             .end((err, res) => {
-                expect(res.body).to.be.an('object')
-                expect(res.body.success).to.be.an('boolean')
-                expect(res.body.data).to.be.an('string')
+                expect(res.body).to.be.an('object');
+                expect(res.body.success).to.be.an('boolean');
+                expect(res.body.data).to.be.an('string');
                 done()
             })
     })
-})
+});
