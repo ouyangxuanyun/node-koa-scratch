@@ -31,10 +31,10 @@ const server = async (ctx, next) => {
     }
 };
 
-app.use(server)
+app.use(server);
 
-module.exports = app
+module.exports = app;
 
 app.listen(3000, () => {
     console.log('[demo] test-unit is starting at port 3000')
-})
+});
